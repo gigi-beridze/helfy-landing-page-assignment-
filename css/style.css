@@ -1,0 +1,105 @@
+:root{
+    --topbar-bg: #08080A;
+    --topbar-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --topbar-icon-bg: #3D404D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.topbar{
+    height: 42px;
+    background: var(--topbar-bg);
+    color: white;
+    font-family: var(--topbar-font);
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    z-index: 60;
+}
+
+.topbar__inner{
+    height: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.topbar__label{
+    flex: 0 0 auto;
+    color: white;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: .01em;
+    white-space: nowrap;
+}
+
+.topbar__label--short{ display: none; }
+
+.topbar__item{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    color: white;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.topbar__icon {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    background: var(--topbar-icon-bg);
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.topbar__sep{
+    flex: 0 0 auto;
+    width: 1px;
+    height: 16px;
+    background: rgba(255,255,255, 0.18);
+}
+
+.topbar__marquee{
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+}
+
+.topbar__track{
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: topbar-scroll 40s linear infinite;
+}
+
+.topbar__marquee:hover .topbar__track{ animation-play-state: paused; }
+
+.topbar__group{
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    padding-right: 34px;
+}
+
+@keyframes topbar-scroll{
+    from{ transform: translate3d(0,0,0); }
+    to  { transform: translate3d(-50%,0,0); }   
+}
