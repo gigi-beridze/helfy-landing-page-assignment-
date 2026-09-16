@@ -79,7 +79,7 @@
     line-height: 1.5;
     color: var(--text-color);
 }
-.information__text-highlight,
+.how-it-works__title-highlight,
 .review__item-text-highlight {
     color: var(--primary-green);
 }
