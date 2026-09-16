@@ -79,7 +79,7 @@
     line-height: 1.5;
     color: var(--text-color);
 }
-
+.information__text-highlight,
 .review__item-text-highlight {
     color: var(--primary-green);
 }
@@ -108,9 +108,9 @@
 .review__arrow {
     width: 48px;
     height: 48px;
-    border: 1px solid var(--text-color);
+    border: 1px solid white;
     border-radius: 50%;
-    background: transparent;
+    background: white;
     color: var(--text-color);
     font-family: var(--font-roboto);
     font-size: 22px;
@@ -127,7 +127,7 @@
 }
 
 .review__arrow:disabled {
-    opacity: 0.4;
+    opacity: 1;
     cursor: default;
 }
 
