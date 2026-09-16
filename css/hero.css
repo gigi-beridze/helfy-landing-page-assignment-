@@ -10,7 +10,6 @@
     grid-template-columns: 50% 50%;
     width: 100%;
     min-height: 650px;
-    max-height: 840px;
     background: #fff;
     font-family: "Poppins", sans-serif;
 }
@@ -157,6 +156,7 @@
 
 .hero__review {
     margin-top: 20px;
+    margin-bottom: 60px;
 }
 
 .hero__review-info {

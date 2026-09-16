@@ -45,7 +45,7 @@
 .review__item {
     flex: 0 0 calc((100% - 72px) / 4);
     width: calc((100% - 72px) / 4);
-    height: 384px;
+    min-height: 384px;
     padding: 32px;
     box-sizing: border-box;
     background: var(--white);
