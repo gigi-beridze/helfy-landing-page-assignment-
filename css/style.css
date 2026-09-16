@@ -87,7 +87,7 @@ html {
     display: flex;
     width: max-content;
     will-change: transform;
-    animation: topbar-scroll 40s linear infinite;
+    animation: topbar-scroll var(--topbar-duration, 40s) linear infinite;
 }
 
 .topbar__marquee:hover .topbar__track{ animation-play-state: paused; }
